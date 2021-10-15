@@ -1,0 +1,10 @@
+<app-title>Statistics</app-title>
+<app-statistics [stats]="stats"></app-statistics>
+<div class="mt"></div>
+<app-title>Item List</app-title>
+<app-item-list
+  *ngFor="let list of lists"
+  [imgUrl]="list.imgUrl"
+  [fullName]="list.fullName"
+  [desc]="list.desc"
+></app-item-list>

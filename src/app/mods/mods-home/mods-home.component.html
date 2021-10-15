@@ -1,0 +1,26 @@
+<app-title>Modal</app-title>
+<button class="ui secondary button" (click)="onClick()">Okay</button>
+<app-modal *ngIf="opened" (close)="onClick()">
+  <div modalTitle>Modal title</div>
+  <div class="ui medium image">
+    <img src="https://picsum.photos/300/300?random" />
+  </div>
+  <div class="description">
+    <div class="ui header">Default Profile Image</div>
+    <p>
+      We've found the following
+      <a href="https://www.gravatar.com" target="_blank">gravatar</a> image
+      associated with your e-mail address.
+    </p>
+    <p>Is it okay to use this photo?</p>
+  </div>
+  <ng-container modalFooter>
+    <div class="ui positive right labeled icon button" (click)="onClick()">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </ng-container>
+</app-modal>
+<div class="mt"></div>
+<app-title>Accordion</app-title>
+<app-accordion [accords]="accords"></app-accordion>

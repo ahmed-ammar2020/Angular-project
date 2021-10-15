@@ -1,0 +1,14 @@
+<table class="ui table" [ngClass]="classNames">
+  <thead>
+    <tr>
+      <th *ngFor="let elem of data">
+        {{ elem.title }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td *ngFor="let elem of data">{{ user[elem.key] }}</td>
+    </tr>
+  </tbody>
+</table>

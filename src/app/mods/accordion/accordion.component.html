@@ -1,0 +1,17 @@
+<div class="ui styled accordion">
+  <ng-container *ngFor="let accord of accords; let i = index">
+    <div
+      class="title"
+      [ngClass]="{ active: i === openedAccordIndex }"
+      (click)="showAnswer(i)"
+    >
+      <i class="dropdown icon"></i>
+      {{ accord.question }}
+    </div>
+    <div class="content" [ngClass]="{ active: i === openedAccordIndex }">
+      <p class="transition visible">
+        {{ accord.answer }}
+      </p>
+    </div>
+  </ng-container>
+</div>
